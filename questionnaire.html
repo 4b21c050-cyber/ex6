@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>餐食表單</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/name.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+    *{box-sizing: border-box;}
+    *{margin: 0; padding: 0;}
+   body {
+            background-color: #F0EADA !important;
+        }
+
+    nav {width: 100%; background:  #364542; color: #EAE0C8;padding: 10px 10px;}
+
+    header {width: 100%; background: #F0EADA; color:#364542; padding: 10px 10px;}
+
+ 
+header .w3-third {
+    padding: 10px !important; 
+}
+
+.w3-card {
+    margin-bottom: 15px;      
+    transition: transform 0.2s;
+	transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+	border: 4px solid transparent;
+}
+
+
+
+.w3-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); 
+	border-color: #364542;
+	
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+    <h1>
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> 首頁</a> 、
+        <a href="aboutme.html"><i class="fa fa-user" aria-hidden="true"></i> 關於我</a> 、
+        <a href="album.html"><i class="fa fa-camera-retro" aria-hidden="true"></i> 我的相簿</a> 、
+        <a href="questionnaire.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 餐食訂購單</a> 、
+        <i class="fa fa-book" aria-hidden="true"></i> 作品集
+    </h1>
+</nav>
+    
+    <div class="w3-container w3-content" style="max-width:800px; margin-top:20px; margin-bottom:50px;">
+        <div class="w3-card-4 w3-white w3-padding-large w3-round-large">
+            <h2 class="w3-center w3-text-teal"><b>午餐與飲品訂購單</b></h2>
+            <p class="w3-text-grey w3-center">請填寫您11/8日午餐與飲品需求，送出後將為您登記訂購。</p>
+            <hr>
+			
+			<form action="#" method="post">
+                <fieldset class="w3-padding w3-round" style="border: 2px solid #009688;">
+                    <legend class="w3-medium w3-text-teal" style="padding: 0 10px; font-weight: bold;">訂購與需求選項</legend>
+
+<div class="w3-section">
+    <label class="w3-bold"><b>1. 是非題：是否訂購餐點？</b></label>
+        <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：勾選代表「同意訂購」，未勾選代表「無須訂購」。</p>
+        <input class="w3-check" type="checkbox" id="q1_yes" name="q1" value="q1_yes">
+        <label for="q1_yes"> 同意，請幫我訂購午餐與飲品。</label>
+		
+		<input class="w3-check" type="checkbox" id="q1_no" name="q1" value="q1_no">
+		<label for="q1_no"> 不同意，將自行購買。</label>
+</div>
+					
+<div class="w3-section">
+    <label class="w3-bold"><b>2. 單選題：請選擇您今日想吃的午餐主餐類別？</b></label>
+        <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請在下列選項中選擇一項最想訂購的便當主餐。</p>
+        <p><input class="w3-radio" type="radio" name="q2" value="bento_golden_chicken" id="q2_1"> <label for="q2_1">黃金雞腿餐盒</label></p>
+        <p><input class="w3-radio" type="radio" name="q2" value="bento_new_orleans" id="q2_2"> <label for="q2_2">紐澳良腿排餐盒</label></p>
+        <p><input class="w3-radio" type="radio" name="q2" value="Roasted Mackerel Bento" id="q2_3"> <label for="q2_3">爐烤鯖魚餐盒</label></p>
+		<p><input class="w3-radio" type="radio" name="q2" value="Sous-vide Chicken Breast Bento" id="q2_4"> <label for="q2_4">舒肥雞胸餐盒</label></p>
+        <p><input class="w3-radio" type="radio" name="q2" value="bento_vege" id="q2_5"> <label for="q2_5">健康蔬食百匯餐盒（素食）</label></p>
+</div>
+ 
+<div class="w3-section">
+    <label for="q3" class="w3-bold"><b>3. 單選題：請選擇您午餐想喝的飲品？</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請點擊下拉選單，選擇一杯想喝的飲品。</p>
+    <select class="w3-select w3-border w3-round" id="q3" name="q3">
+    <option value="" disabled selected>-- 請選擇飲品 --</option>
+    <option value="Iced Caffè Americano">冰美式咖啡</option>
+	<option value="Caffè Americano">熱美式咖啡</option>
+    <option value="Iced Caffè Latte">冰那堤</option>
+	<option value="Caffè Latte">熱那堤</option>
+	<option value="Hot Caffè Mocha">冰摩卡</option>
+	<option value="Caramel Frappuccino Blended Beverage">焦糖星冰樂</option>
+	<option value="Pure Matcha Cream Frappuccino Blended Beverage">醇濃抹茶星冰樂</option>
+	<option value="Java Chip Frappuccino Blended Beverage">摩卡可可碎片星冰樂</option>
+    <option value="Cappuccino">卡布奇諾 (僅熱飲)</option>
+    <option value="Espresso">濃縮咖啡(僅熱飲)</option>
+    <option value="none">不需飲料</option>
+    </select>
+</div>
+
+<div class="w3-section">
+    <label class="w3-bold"><b>4. 複選題：想額外加點餐點？</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：本題為多選題，可勾選你想額外加點的餐點項目。</p>
+    <p><input class="w3-check" type="checkbox" name="q4[]" value="Dubai Chocolate Mille Crêpe" id="q4_1"> <label for="q4_1">杜拜巧克力千層蛋糕 (＄240)</label></p>
+    <p><input class="w3-check" type="checkbox" name="q4[]" value="Classic Chocolate Rose Tart" id="q4_2"> <label for="q4_2">經典巧克力塔 (＄140)</label></p>
+    <p><input class="w3-check" type="checkbox" name="q4[]" value="Classic Canelé" id="q4_3"> <label for="q4_3">經典可麗露(＄60)</label></p>
+    <p><input class="w3-check" type="checkbox" name="q4[]" value="Classic Cheese Cake" id="q4_4"> <label for="q4_4">經典起司蛋糕 (＄120)</label></p>
+    <p><input class="w3-check" type="checkbox" name="q4[]" value="Classic Mille Crêpes" id="q4_5"> <label for="q4_5">經典法式千層薄餅 (＄120)</label></p>
+	<p><input class="w3-check" type="checkbox" name="q4[]" value="Strawberry Cheese Cake" id="q4_6"> <label for="q4_6">草莓起司蛋糕 (＄150)</label></p>
+	<p><input class="w3-check" type="checkbox" name="q4[]" value="French Croissant" id="q4_7"> <label for="q4_7">法式可頌 (＄65)</label></p>
+	<p><input class="w3-check" type="checkbox" name="q4[]" value="Cinnamon Roll" id="q4_8"> <label for="q4_8">經典核桃肉桂捲 (＄95)</label></p>
+</div>
+
+<div class="w3-section">
+    <label for="q5" class="w3-bold"><b>5. 複選題：您希望未來可訂購哪些異國料理？</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：按住 Ctrl（Windows）或 Command（Mac）鍵可進行多選。</p>
+    <select class="w3-select w3-border w3-round" id="q5" name="q5[]" multiple size="4">
+    <option value="taiwanese">台式</option>
+    <option value="japanese">日式</option>
+    <option value="korean">韓式</option>
+    <option value="italian">義式</option>
+    <option value="thai">泰式</option>
+	<option value="american">美式</option>
+	<option value="vietnamese">越式</option>
+    </select>
+</div>
+
+<div class="w3-section">
+    <label class="w3-bold"><b>6. 填充題：請填寫訂購人姓名、聯絡電話與信箱。</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請分別在下方輸入框填寫您的姓名與手機號碼，方便到餐時通知取餐。</p>
+    
+  
+    <label for="q6_name" class="w3-small">訂購人姓名：</label>
+    <input class="w3-input w3-border w3-round w3-margin-bottom" type="text" id="q6_name" name="q6_name" placeholder="例如：王小明">
+    
+   
+    <label for="q6_phone" class="w3-small">聯絡電話：</label>
+    <input class="w3-input w3-border w3-round" type="tel" id="q6_phone" name="q6_phone" placeholder="例如：0912-345678">
+	
+	<label for="q6_email" class="w3-small">信箱：</label>
+    <input class="w3-input w3-border w3-round" type="email" id="q6_email" name="q6_email" placeholder="例如：123456789@gmail.com">
+</div>
+
+<div class="w3-section">
+    <label for="q7" class="w3-bold"><b>7. 填充題：請問您額外需要幾組免洗餐具？</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請輸入阿拉伯數字，例如：1 或 2 組（若響應環保	不需要餐具請填 0）。</p>
+    <input class="w3-input w3-border w3-round" type="number" id="q7" name="q7" min="0" max="10" value="0" placeholder="0">
+</div>
+    
+<div class="w3-section">
+    <label for="q8" class="w3-bold"><b>8. 填充題：請填寫表單送出日期。</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請點擊日曆選擇日期，以利後續確認。</p>
+    <input class="w3-input w3-border w3-round" type="date" id="q8" name="q8">
+</div>
+
+
+<div class="w3-section">
+    <label for="q9" class="w3-bold"><b>9. 問答題：是否有忌口（如過敏、去蔥蒜、少油少鹽）或備註？</b></label>
+    <p class="w3-text-grey w3-small" style="margin: 2px 0 8px 0;">說明：請輸入具體說明文字，區域高度至少保留三列以上。</p>
+    <textarea class="w3-input w3-border w3-round" id="q9" name="q9" rows="4" placeholder="例如：花生過敏、醬汁另外放..."></textarea>
+</div>
+	
+	<div class="w3-section w3-center" style="margin-top: 30px;">
+    <button type="submit" class="w3-button w3-teal w3-round-large w3-margin-right">送出訂單</button>
+    <button type="reset" class="w3-button w3-red w3-round-large">重設內容</button>
+</div>
+
+  </fieldset>
+  </form>
+  </div>
+  </div>
+  
+
+    </body>
+
+</html>
